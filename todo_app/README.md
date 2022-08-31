@@ -105,6 +105,7 @@ echo "geckodriver.log" >> .gitignore
 git rm -r --cashed todo_app/__pycache__
 ```
 and add in the .gitignore file
+
 ```commandline
 echo "__pycache __"  >> .gitignore
 echo "*.pyc" >> .gitignore
