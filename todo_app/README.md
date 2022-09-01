@@ -61,6 +61,28 @@ deactive
 workon superlists
 ```
 
+## Настройка виртуальной среды venv
+- Создание
+```commandline
+python3 -m venv venv
+```
+     - `-m` указание Python запускать *venv* как исполняемый модуль
+- Активация
+- 
+      *  для Windows
+```commandline
+venv\Scripts\activate.bat 
+```
+      - для Linux
+```commandline
+source venv/bin/activate
+```
+- Также новый путь до библиотек можно увидеть выполнив команду:
+```commandline
+python3 -c "import site; print(site.getsitepackages())"
+```
+
+
 ### Установка Django and Selenium
 ```
 pip install "django=1.12" "selenium<4"
