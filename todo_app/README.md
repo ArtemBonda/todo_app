@@ -1,4 +1,5 @@
-# Приложение у
+# Приложение To-Do List #
+
 ## Необходимый софт
 
 1. Firefox - веб браузер
@@ -109,4 +110,23 @@ and add in the .gitignore file
 ```commandline
 echo "__pycache __"  >> .gitignore
 echo "*.pyc" >> .gitignore
+```
+___
+
+- Подготовка зависимостей
+1. Активировать виртуальное окружение
+2. Записать используемые библиотеки в файл
+```commandline
+pip freeze > requirements.txt
+```
+3. Добавить `requirements.txt` в отслеживаемые
+
+   *  Развертывание необходимых библиотек для работы с приложением
+```commandline
+pip install -r requirements.txt
+```
+   * Просмотр установленных библиотек 
+
+```commandline
+pip list
 ```
