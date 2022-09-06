@@ -1,8 +1,11 @@
 from django.test import TestCase
+from django.urls import resolve
+from lists.views import home_page
 
-class SmokeTest(TestCase):
-    '''Тест на токсичность'''
+class HomePage(TestCase):
+    '''Тест домашней страницы'''
 
-    def test_bad_maths(self):
-        '''тест: Неправильные математические расчеты'''
-        self.assertEqual(1 + 1, 3,msg='Fail test')
+    def test_root_url_resolves_to_home_page_view(self):
+        '''тест: корневой url преобразуется в представлении домашней страницы'''
+        found = resolve('/')
+        self.assertEqual(found.func, home_page)
